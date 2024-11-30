@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.FileInputStream;
@@ -14,13 +15,11 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.LogManager;
-import java.util.logging.Logger;
 
 public class WebDriverConfig {
-    public static final Logger log = (Logger) LoggerFactory.getLogger(WebDriverConfig.class);
+    public static final Logger log = LoggerFactory.getLogger(WebDriverConfig.class);
     public WebDriver driver;
     public Properties property;
-
 
 
     public WebDriver initializeWebDriver() throws IOException {
